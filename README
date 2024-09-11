@@ -1,11 +1,12 @@
-CONVERSION PIPELINE FOR THE ICELANDIC GIGAWORD CORPUS
-=====================================================
+# igc-converter
 
-This is a conversion pipeline for converting the Icelandic Gigaword Corpus to JSONL format files. The pipeline assumes a copy of the unannotated Icelandic Gigaword Corpus, which can be downloaded here: http://hdl.handle.net/20.500.12537/253.
+This is a conversion pipeline for converting the Icelandic Gigaword Corpus to JSONL format files. The pipeline assumes a copy of the unannotated Icelandic Gigaword Corpus, which can be downloaded from the [Icelandic CLARIN repository](http://hdl.handle.net/20.500.12537/253).
 
 To run the scripts you will need a python3 environment. Install the required dependencies by running
 
-> pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 The corpus can be converted as a whole or one subcorpus at a time. The script used to convert the corpus is `convert_IGC.py`, which has the following possible arguments:
 
@@ -17,11 +18,15 @@ The corpus can be converted as a whole or one subcorpus at a time. The script us
 
 To convert the 22.10 version of the corpus as a whole, run 
 
-> python convert_IGC.py --input-path path/to/IGC --all-corpora
+```
+python convert_IGC.py --input-path path/to/IGC --all-corpora
+```
 
 To convert the 22.10 version of the IGC-News1 subcorpus, run
 
-> python convert_IGC.py --input-path path/to/IGC --corpus IGC-News1
+```
+python convert_IGC.py --input-path path/to/IGC --corpus IGC-News1
+```
 
 The converted output, which is saved under the output directory, is twofold: for each converted subcorpus, a JSONL file is created in `datasets-info`, containing information on each converted subdirectory of the subcorpus, and the converted subcorpus itself is created as JSONL files in `converted-corpora`. The information and format of the file in `datasets-info` is the following:
 
