@@ -1,6 +1,6 @@
 # IGC-Converter
 
-This is a conversion pipeline for converting the Icelandic Gigaword Corpus to JSONL format files. The pipeline assumes a copy of the unannotated Icelandic Gigaword Corpus, which can be downloaded from the [Icelandic CLARIN repository](http://hdl.handle.net/20.500.12537/253).
+A conversion pipeline for converting the Icelandic Gigaword Corpus to JSONL format files. The pipeline assumes a copy of the [unannotated Icelandic Gigaword Corpus](http://hdl.handle.net/20.500.12537/253).
 
 To run the scripts you will need a python3 environment. Install the required dependencies by running
 
@@ -10,11 +10,11 @@ pip install -r requirements.txt
 
 The corpus can be converted as a whole or one subcorpus at a time. The script used to convert the corpus is `convert_IGC.py`, which has the following possible arguments:
 
-- --input-path: path to the original IGC.
-- --version: the version of the IGC which will be converted. The default version is 22.10.
-- --all-corpora: convert all subcorpora of the IGC.
-- --corpus: convert one subcorpus of the IGC, e.g. 'Adjud'.
-- --output-path: the path to an output directory. If this is not defined, it defaults to an `output` directory.
+- `--input-path`: path to the original IGC.
+- `--version`: the version of the IGC which will be converted. The default version is 22.10. If the version differs, it needs to be specified because it appears in the converted output.
+- `--all-corpora`: convert all subcorpora of the IGC.
+- `--corpus`: convert one subcorpus of the IGC, e.g. 'Adjud'.
+- `--output-path`: the path to an output directory. If this is not defined, it defaults to an `output` directory.
 
 To convert the 22.10 version of the corpus as a whole, run 
 
